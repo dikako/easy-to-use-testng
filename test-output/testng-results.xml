@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="88746" started-at="2020-08-27T04:15:48Z" finished-at="2020-08-27T04:17:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="88746" started-at="2020-08-27T04:15:48Z" finished-at="2020-08-27T04:17:16Z">
+      <class name="testcases.Test_Pilar">
+        <test-method status="PASS" signature="set()[pri:0, instance:testcases.Test_Pilar@53f48368]" name="set" is-config="true" duration-ms="12516" started-at="2020-08-27T11:15:49Z" finished-at="2020-08-27T11:16:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set -->
+        <test-method status="PASS" signature="test_pilar_tampil_menu_footer(java.lang.String)[pri:0, instance:testcases.Test_Pilar@53f48368]" name="test_pilar_tampil_menu_footer" duration-ms="10915" started-at="2020-08-27T11:16:01Z" data-provider="menu_footer_pilar_tampil" finished-at="2020-08-27T11:16:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[action-home]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_pilar_tampil_menu_footer -->
+        <test-method status="PASS" signature="done(org.testng.ITestResult)[pri:0, instance:testcases.Test_Pilar@53f48368]" name="done" is-config="true" duration-ms="4080" started-at="2020-08-27T11:16:12Z" finished-at="2020-08-27T11:16:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_pilar_tampil_menu_footer status=SUCCESS method=Test_Pilar.test_pilar_tampil_menu_footer(java.lang.String)[pri:0, instance:testcases.Test_Pilar@53f48368] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- done -->
+        <test-method status="PASS" signature="set()[pri:0, instance:testcases.Test_Pilar@53f48368]" name="set" is-config="true" duration-ms="6744" started-at="2020-08-27T11:16:16Z" finished-at="2020-08-27T11:16:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set -->
+        <test-method status="PASS" signature="test_pilar_tampil_menu_footer(java.lang.String)[pri:0, instance:testcases.Test_Pilar@53f48368]" name="test_pilar_tampil_menu_footer" duration-ms="10594" started-at="2020-08-27T11:16:23Z" data-provider="menu_footer_pilar_tampil" finished-at="2020-08-27T11:16:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[action-live-event]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_pilar_tampil_menu_footer -->
+        <test-method status="PASS" signature="done(org.testng.ITestResult)[pri:0, instance:testcases.Test_Pilar@53f48368]" name="done" is-config="true" duration-ms="5140" started-at="2020-08-27T11:16:34Z" finished-at="2020-08-27T11:16:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_pilar_tampil_menu_footer status=SUCCESS method=Test_Pilar.test_pilar_tampil_menu_footer(java.lang.String)[pri:0, instance:testcases.Test_Pilar@53f48368] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- done -->
+        <test-method status="PASS" signature="set()[pri:0, instance:testcases.Test_Pilar@53f48368]" name="set" is-config="true" duration-ms="22079" started-at="2020-08-27T11:16:39Z" finished-at="2020-08-27T11:17:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set -->
+        <test-method status="PASS" signature="test_pilar_tampil_menu_footer(java.lang.String)[pri:0, instance:testcases.Test_Pilar@53f48368]" name="test_pilar_tampil_menu_footer" duration-ms="9249" started-at="2020-08-27T11:17:01Z" data-provider="menu_footer_pilar_tampil" finished-at="2020-08-27T11:17:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[action-library]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_pilar_tampil_menu_footer -->
+        <test-method status="PASS" signature="done(org.testng.ITestResult)[pri:0, instance:testcases.Test_Pilar@53f48368]" name="done" is-config="true" duration-ms="6165" started-at="2020-08-27T11:17:10Z" finished-at="2020-08-27T11:17:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_pilar_tampil_menu_footer status=SUCCESS method=Test_Pilar.test_pilar_tampil_menu_footer(java.lang.String)[pri:0, instance:testcases.Test_Pilar@53f48368] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- done -->
+        <test-method status="SKIP" signature="test_pilar_tak_tampil_menu_footer(java.lang.String)[pri:1, instance:testcases.Test_Pilar@53f48368]" name="test_pilar_tak_tampil_menu_footer" duration-ms="0" started-at="2020-08-27T11:17:16Z" data-provider="menu_footer_pilar_tak_tampil" finished-at="2020-08-27T11:17:16Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:163)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:430)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1274)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:989)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1079)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.NullPointerException
+	at utility.ReadExcel.getCellData(ReadExcel.java:20)
+	at testcases.Test_Pilar.menu_footer_pilar_tak_tampil(Test_Pilar.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:137)
+	... 20 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_pilar_tak_tampil_menu_footer -->
+      </class> <!-- testcases.Test_Pilar -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
