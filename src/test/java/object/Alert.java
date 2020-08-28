@@ -157,6 +157,66 @@ public class Alert {
 	}
 
 	// Get Text
+	
+	public void byIdGetText(String selector) {
+		WebElement element = driver.findElement(By.id(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		actions.build().perform();
+		System.out.println("Text : " + text);
+	}
+	
+	public void byXpathGetText(String selector) {
+		WebElement element = driver.findElement(By.xpath(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		actions.build().perform();
+		System.out.println("Text : " + text);
+	}
+	
+	public void byClassGetText(String selector) {
+		WebElement element = driver.findElement(By.id(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		actions.build().perform();
+		System.out.println("Text : " + text);
+	}
+	
+	public void byTagGetText(String selector) {
+		WebElement element = driver.findElement(By.id(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		actions.build().perform();
+		System.out.println("Text : " + text);
+	}
+	
+	public void byLinkTextGetText(String selector) {
+		WebElement element = driver.findElement(By.id(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		actions.build().perform();
+		System.out.println("Text : " + text);
+	}
+	
+	public void byCssGetText(String selector) {
+		WebElement element = driver.findElement(By.id(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		actions.build().perform();
+		System.out.println("Text : " + text);
+	}
 
 	public void byNameGetText(String selector) {
 		WebElement element = driver.findElement(By.name(selector));
@@ -175,17 +235,8 @@ public class Alert {
 		System.out.println(element.get(index).getText());
 	}
 
-	public void byIdGetText(String selector) {
-		WebElement element = driver.findElement(By.id(selector));
-		waitForVisible(driver, element);
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element);
-		String text = element.getText();
-		actions.build().perform();
-		System.out.println("Text : " + text);
-	}
 
-	public String byClassGetText(String selector) {
+	public String byClassReturnText(String selector) {
 		WebElement element = driver.findElement(By.className(selector));
 		waitForVisible(driver, element);
 		Actions actions = new Actions(driver);

@@ -79,3 +79,31 @@ public class objectAlert extends Setup {
   }
 }
 ```
+
+#### Get Text Single Element
+* Function `byIdGetText` Validate text with selector `ID`
+* Function `byClassGetText` Validate text with selector `CLASSNAME`
+* Function `byXpathGetText` Validate text with selector `XPATH`
+* Function `byCssGetText` Validate text with selector `CSS SELECTOR`
+* Function `byTagGetText` Validate text with selector `TAG NAME`
+* Function `byLinkGetText` Validate text with selector `LINK TEXT`
+* Function `byNameGetText` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;
+import object.Alert;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Alert alert = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Get Text")
+ 
+    alert.byIdDisplay("Your ID Selector");
+  }
+}
+```
