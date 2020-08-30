@@ -18,6 +18,7 @@ public class Button {
 		this.driver = driver;
 	}
 
+	//Klik Button 
 	public void byId(String selector) {
 		WebElement element = driver.findElement(By.id(selector));
 		waitForVisible(driver, element);
@@ -27,14 +28,6 @@ public class Button {
 		actions.build().perform();
 		System.out.println("Button is Clicked!");
 	}
-	
-	//aaaa
-	public void byXpaths(String selector) {
-		WebElement element = driver.findElement(By.xpath(selector));
-		element.click();
-		System.out.println("Button is Clicked!");
-	}
-	//aaaa
 
 	public void byXpath(String selector) {
 		WebElement element = driver.findElement(By.xpath(selector));
@@ -85,7 +78,18 @@ public class Button {
 		actions.build().perform();
 		System.out.println("Button is Clicked!");
 	}
-
+	
+	public void byName(String selector) {
+		WebElement element = driver.findElement(By.name(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		actions.click();
+		actions.build().perform();
+		System.out.println("Button is Clicked!");
+	}
+	
+	//Button Get text
 	public void byIdGetText(String selector, String buttonText) {
 		WebElement element = driver.findElement(By.id(selector));
 		waitForVisible(driver, element);
@@ -164,7 +168,6 @@ public class Button {
 	}
 
 	// Button Display
-
 	public void byIdDisplay(String selector, boolean display) {
 		WebElement element = driver.findElement(By.id(selector));
 		waitForVisible(driver, element);
@@ -253,8 +256,7 @@ public class Button {
 		System.out.println("Button Login is Displayed");
 	}
 
-	// Klik By Index
-
+	// Klik Button By Index
 	public void byIdByIndex(String selector, int index) {
 		List<WebElement> element = driver.findElements(By.id(selector));
 		System.out.println(element.size());
@@ -275,9 +277,36 @@ public class Button {
 		element.get(index).click();
 		System.out.println("Button is Clicked!");
 	}
+	
+	public void byNameByIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.name(selector));
+		System.out.println(element.size());
+		element.get(index).click();
+		System.out.println("Button is Clicked!");
+	}
+	
+	public void byTagByIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.tagName(selector));
+		System.out.println(element.size());
+		element.get(index).click();
+		System.out.println("Button is Clicked!");
+	}
+	
+	public void byCssByIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.cssSelector(selector));
+		System.out.println(element.size());
+		element.get(index).click();
+		System.out.println("Button is Clicked!");
+	}
+	
+	public void byLinkTextByIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.linkText(selector));
+		System.out.println(element.size());
+		element.get(index).click();
+		System.out.println("Button is Clicked!");
+	}
 
 	// Get Attributes
-
 	public void byClassByTagByAttrToString(String selector, int index, String tagName, String attr,
 			String attributeValue) {
 		List<WebElement> element = driver.findElements(By.className(selector));
@@ -320,7 +349,6 @@ public class Button {
 	}
 	
 	//Valdiate Button disbld 0r enabled
-	
 	public void byIdEnabled(String selector, boolean enable) {
 		WebElement element = driver.findElement(By.id(selector));
 		waitForVisible(driver, element);
@@ -332,6 +360,81 @@ public class Button {
 		actions.build().perform();
 		System.out.println("Button is Enabled: " + btn);
 	}
+	
+	public void byClassEnabled(String selector, boolean enable) {
+		WebElement element = driver.findElement(By.className(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		boolean btn = element.isEnabled();
+		Assert.assertEquals(btn, enable);
+		actions.sendKeys(Keys.ENTER);
+		actions.build().perform();
+		System.out.println("Button is Enabled: " + btn);
+	}
+	
+	public void byXpathEnabled(String selector, boolean enable) {
+		WebElement element = driver.findElement(By.xpath(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		boolean btn = element.isEnabled();
+		Assert.assertEquals(btn, enable);
+		actions.sendKeys(Keys.ENTER);
+		actions.build().perform();
+		System.out.println("Button is Enabled: " + btn);
+	}
+	
+	public void byTagEnabled(String selector, boolean enable) {
+		WebElement element = driver.findElement(By.tagName(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		boolean btn = element.isEnabled();
+		Assert.assertEquals(btn, enable);
+		actions.sendKeys(Keys.ENTER);
+		actions.build().perform();
+		System.out.println("Button is Enabled: " + btn);
+	}
+	
+	public void byNameEnabled(String selector, boolean enable) {
+		WebElement element = driver.findElement(By.name(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		boolean btn = element.isEnabled();
+		Assert.assertEquals(btn, enable);
+		actions.sendKeys(Keys.ENTER);
+		actions.build().perform();
+		System.out.println("Button is Enabled: " + btn);
+	}
+	
+	public void byLinkTextEnabled(String selector, boolean enable) {
+		WebElement element = driver.findElement(By.linkText(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		boolean btn = element.isEnabled();
+		Assert.assertEquals(btn, enable);
+		actions.sendKeys(Keys.ENTER);
+		actions.build().perform();
+		System.out.println("Button is Enabled: " + btn);
+	}
+	
+	public void byCssEnabled(String selector, boolean enable) {
+		WebElement element = driver.findElement(By.cssSelector(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		boolean btn = element.isEnabled();
+		Assert.assertEquals(btn, enable);
+		actions.sendKeys(Keys.ENTER);
+		actions.build().perform();
+		System.out.println("Button is Enabled: " + btn);
+	}
+	
+	
+	// Return Size
 	
 	public int byClassReturnSize(String selector) {
 		List<WebElement> element = driver.findElements(By.className(selector));

@@ -130,7 +130,7 @@ public class objectAlert extends Setup {
     Alert alert = PageFactory.initElements(driver, Alert.class);
     Url url = new Url(driver);
     
-    url.urls("/Your Page Need Get Text")
+    url.urls("/Your Page Need Get Text");
  
     alert.byIdGetText("Your Selector");
   }
@@ -158,7 +158,7 @@ public class objectAlert extends Setup {
     Alert alert = PageFactory.initElements(driver, Alert.class);
     Url url = new Url(driver);
     
-    url.urls("/Your Page Need Get Text By Index")
+    url.urls("/Your Page Need Get Text By Index");
  
     alert.byIdGetTextIndex("Your Selector", index, "Your Expected Text Validate");
   }
@@ -186,7 +186,7 @@ public class objectAlert extends Setup {
     Alert alert = PageFactory.initElements(driver, Alert.class);
     Url url = new Url(driver);
     
-    url.urls("/Your Page Need Return Text")
+    url.urls("/Your Page Need Return Text");
  
     alert.byIdRetunText("Your Selector");
   }
@@ -214,7 +214,7 @@ public class objectAlert extends Setup {
     Alert alert = PageFactory.initElements(driver, Alert.class);
     Url url = new Url(driver);
     
-    url.urls("/Your Page Need Return Text By Index")
+    url.urls("/Your Page Need Return Text By Index");
  
     alert.byIdReturnTextIndex("Your Selector", index);
   }
@@ -242,7 +242,7 @@ public class objectAlert extends Setup {
     Alert alert = PageFactory.initElements(driver, Alert.class);
     Url url = new Url(driver);
     
-    url.urls("/Your Page Need Validate Text Contains")
+    url.urls("/Your Page Need Validate Text Contains");
  
     alert.byIdContains("Your Selector", "Your Expected Text Validate");
   }
@@ -270,7 +270,7 @@ public class objectAlert extends Setup {
     Alert alert = PageFactory.initElements(driver, Alert.class);
     Url url = new Url(driver);
     
-    url.urls("/Your Page Need Validate Text Contains BY Index")
+    url.urls("/Your Page Need Validate Text Contains BY Index");
  
     alert.byIdContainsIndex("Your Selector", index, "Your Expected Text Validate");
   }
@@ -292,9 +292,91 @@ public class objectAlert extends Setup {
     Alert alert = PageFactory.initElements(driver, Alert.class);
     Url url = new Url(driver);
     
-    url.urls("/Your Page Need Validate Text  BY Index")
+    url.urls("/Your Page Need Validate Text  BY Index");
  
     alert.urlValidate("Expected Your Url");
+  }
+}
+```
+
+#### `src/test/java/object/Button.java`
+#### Click Button Single Element
+* Function `byId` Validate text with selector `ID`
+* Function `byClass` Validate text with selector `CLASSNAME`
+* Function `byXpath` Validate text with selector `XPATH`
+* Function `byCss` Validate text with selector `CSS SELECTOR`
+* Function `byTag` Validate text with selector `TAG NAME`
+* Function `byLinkText` Validate text with selector `LINK TEXT`
+* Function `byName` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;
+import object.Button;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Button button = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Click Button");
+    button.byId("Your Selector");
+  }
+}
+```
+
+#### Click Button By Index Element
+* Function `byIdByIndex` Validate text with selector `ID`
+* Function `byClassByIndex` Validate text with selector `CLASSNAME`
+* Function `byXpathByIndex` Validate text with selector `XPATH`
+* Function `byCssByIndex` Validate text with selector `CSS SELECTOR`
+* Function `byTagByIndex` Validate text with selector `TAG NAME`
+* Function `byLinkTextByIndex` Validate text with selector `LINK TEXT`
+* Function `byNameByIndex` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;
+import object.Button;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Button button = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Click Button By Index");
+    button.byIdByIndex("Your Selector", index);
+  }
+}
+```
+
+#### Validate Button Enable or Disabled Element
+* Function `byIdEnabled` Validate text with selector `ID`
+* Function `byClassEnabled` Validate text with selector `CLASSNAME`
+* Function `byXpathEnabled` Validate text with selector `XPATH`
+* Function `byCssEnabled` Validate text with selector `CSS SELECTOR`
+* Function `byTagEnabled` Validate text with selector `TAG NAME`
+* Function `byLinkTextEnabled` Validate text with selector `LINK TEXT`
+* Function `byNameEnabled` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;
+import object.Button;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Button button = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Click Button By Index");
+    button.byIdEnabled("Your Selector", true or false);
   }
 }
 ```
