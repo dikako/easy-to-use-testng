@@ -46,10 +46,39 @@ public class objectAlert extends Setup {
     Url url = new Url(driver);
     
     url.urls("/Your Page Need Validate Text")
-    alert.byId("Your ID Selector", "Your Expected Text Valdiate");
+    alert.byId("Your Selector", "Your Expected Text Validate");
   }
 }
 ```
+
+#### Validate Text By Index Element
+* Function `byIdByIndex` Validate text with selector `ID`
+* Function `byClassByIndex` Validate text with selector `CLASSNAME`
+* Function `byXpathByIndex` Validate text with selector `XPATH`
+* Function `byCssByIndex` Validate text with selector `CSS SELECTOR`
+* Function `byTagByIndex` Validate text with selector `TAG NAME`
+* Function `byLinkTextByIndex` Validate text with selector `LINK TEXT`
+* Function `byNameByIndex` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;  
+import object.Alert;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Alert alert = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Validate Text  BY Index")
+ 
+    alert.byIdByIndex("Your Selector", index, "Your Expected Text Validate");
+  }
+}
+```
+
 #### Validate Element Display Single Element
 * Function `byIdDisplay` Validate text with selector `ID`
 * Function `byClassDisplay` Validate text with selector `CLASSNAME`
@@ -75,7 +104,7 @@ public class objectAlert extends Setup {
     
     // true = for element display
     // false = for element not display
-    alert.byIdDisplay("Your ID Selector", true);
+    alert.byIdDisplay("Your Selector", true);
   }
 }
 ```
@@ -103,7 +132,169 @@ public class objectAlert extends Setup {
     
     url.urls("/Your Page Need Get Text")
  
-    alert.byIdDisplay("Your ID Selector");
+    alert.byIdGetText("Your Selector");
+  }
+}
+```
+
+#### Get Text By Index Element
+* Function `byIdGetTextIndex` Validate text with selector `ID`
+* Function `byClassGetTextIndex` Validate text with selector `CLASSNAME`
+* Function `byXpathGetTextIndex` Validate text with selector `XPATH`
+* Function `byCssGetTextIndex` Validate text with selector `CSS SELECTOR`
+* Function `byTagGetTextIndex` Validate text with selector `TAG NAME`
+* Function `byLinkTextGetTextIndex` Validate text with selector `LINK TEXT`
+* Function `byNameGetTextIndex` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;
+import object.Alert;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Alert alert = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Get Text By Index")
+ 
+    alert.byIdGetTextIndex("Your Selector", index, "Your Expected Text Validate");
+  }
+}
+```
+
+#### Return Text Single Element
+* Function `byIdReturnText` Validate text with selector `ID`
+* Function `byClassReturnText` Validate text with selector `CLASSNAME`
+* Function `byXpathReturnText` Validate text with selector `XPATH`
+* Function `byCssReturnText` Validate text with selector `CSS SELECTOR`
+* Function `byTagReturnText` Validate text with selector `TAG NAME`
+* Function `byLinkTextReturnText` Validate text with selector `LINK TEXT`
+* Function `byNameReturnText` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;  
+import object.Alert;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Alert alert = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Return Text")
+ 
+    alert.byIdRetunText("Your Selector");
+  }
+}
+```
+
+#### Return Text By Index Element
+* Function `byIdReturnTextIndex` Validate text with selector `ID`
+* Function `byClassReturnTextIndex` Validate text with selector `CLASSNAME`
+* Function `byXpathReturnTextIndex` Validate text with selector `XPATH`
+* Function `byCssReturnTextIndex` Validate text with selector `CSS SELECTOR`
+* Function `byTagReturnTextIndex` Validate text with selector `TAG NAME`
+* Function `byLinkTextReturnTextIndex` Validate text with selector `LINK TEXT`
+* Function `byNameReturnTextIndex` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;  
+import object.Alert;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Alert alert = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Return Text By Index")
+ 
+    alert.byIdReturnTextIndex("Your Selector", index);
+  }
+}
+```
+
+#### Validate Text Contains Single Element
+* Function `byIdContains` Validate text with selector `ID`
+* Function `byClassContains` Validate text with selector `CLASSNAME`
+* Function `byXpathContains` Validate text with selector `XPATH`
+* Function `byCssContains` Validate text with selector `CSS SELECTOR`
+* Function `byTagContains` Validate text with selector `TAG NAME`
+* Function `byLinkTextContains` Validate text with selector `LINK TEXT`
+* Function `byNameContains` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;  
+import object.Alert;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Alert alert = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Validate Text Contains")
+ 
+    alert.byIdContains("Your Selector", "Your Expected Text Validate");
+  }
+}
+```
+
+#### Validate Text Contains By Index Element
+* Function `byIdContainsIndex` Validate text with selector `ID`
+* Function `byClassContainsIndex` Validate text with selector `CLASSNAME`
+* Function `byXpathContainsIndex` Validate text with selector `XPATH`
+* Function `byCssContainsIndex` Validate text with selector `CSS SELECTOR`
+* Function `byTagNameContainsIndex` Validate text with selector `TAG NAME`
+* Function `byLinkTextContainsIndex` Validate text with selector `LINK TEXT`
+* Function `byNameContainsIndex` Validate text with selector `Name`
+####  Below Sample Code
+```
+package testcases;  
+import object.Alert;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Alert alert = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Validate Text Contains BY Index")
+ 
+    alert.byIdContainsIndex("Your Selector", index, "Your Expected Text Validate");
+  }
+}
+```
+
+#### Validate Url 
+* Function `urlValidate` For Return Url
+####  Below Sample Code
+```
+package testcases;  
+import object.Alert;
+import config.Setup;
+import config.Url;
+
+public class objectAlert extends Setup {
+ 
+  public void testName() {
+    Alert alert = PageFactory.initElements(driver, Alert.class);
+    Url url = new Url(driver);
+    
+    url.urls("/Your Page Need Validate Text  BY Index")
+ 
+    alert.urlValidate("Expected Your Url");
   }
 }
 ```

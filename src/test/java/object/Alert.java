@@ -234,7 +234,44 @@ public class Alert {
 		Assert.assertEquals(element.get(index).getText().replace(" ", "").toLowerCase(), expected.replace(" ", "").toLowerCase());
 		System.out.println(element.get(index).getText());
 	}
-
+	
+	public void byIdGetTextIndex(String selector, int index, String expected) {
+		List<WebElement> element = driver.findElements(By.id(selector));
+		Assert.assertEquals(element.get(index).getText().replace(" ", "").toLowerCase(), expected.replace(" ", "").toLowerCase());
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byXpathGetTextIndex(String selector, int index, String expected) {
+		List<WebElement> element = driver.findElements(By.xpath(selector));
+		Assert.assertEquals(element.get(index).getText().replace(" ", "").toLowerCase(), expected.replace(" ", "").toLowerCase());
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byClassGetTextIndex(String selector, int index, String expected) {
+		List<WebElement> element = driver.findElements(By.className(selector));
+		Assert.assertEquals(element.get(index).getText().replace(" ", "").toLowerCase(), expected.replace(" ", "").toLowerCase());
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byNameGetTextIndex(String selector, int index, String expected) {
+		List<WebElement> element = driver.findElements(By.name(selector));
+		Assert.assertEquals(element.get(index).getText().replace(" ", "").toLowerCase(), expected.replace(" ", "").toLowerCase());
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byLinkTextGetTextIndex(String selector, int index, String expected) {
+		List<WebElement> element = driver.findElements(By.linkText(selector));
+		Assert.assertEquals(element.get(index).getText().replace(" ", "").toLowerCase(), expected.replace(" ", "").toLowerCase());
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byCssGetTextIndex(String selector, int index, String expected) {
+		List<WebElement> element = driver.findElements(By.cssSelector(selector));
+		Assert.assertEquals(element.get(index).getText().replace(" ", "").toLowerCase(), expected.replace(" ", "").toLowerCase());
+		System.out.println(element.get(index).getText());
+	}
+	
+	// Return Text
 
 	public String byClassReturnText(String selector) {
 		WebElement element = driver.findElement(By.className(selector));
@@ -243,6 +280,98 @@ public class Alert {
 		actions.moveToElement(element);
 		String text = element.getText();
 		return text;
+	}
+	
+	public String byIdReturnText(String selector) {
+		WebElement element = driver.findElement(By.id(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		return text;
+	}
+	
+	public String byXpathReturnText(String selector) {
+		WebElement element = driver.findElement(By.xpath(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		return text;
+	}
+	
+	public String byTagReturnText(String selector) {
+		WebElement element = driver.findElement(By.tagName(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		return text;
+	}
+	
+	public String byCssReturnText(String selector) {
+		WebElement element = driver.findElement(By.cssSelector(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		return text;
+	}
+	
+	public String byLinkTextReturnText(String selector) {
+		WebElement element = driver.findElement(By.linkText(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		return text;
+	}
+	
+	public String byNameReturnText(String selector) {
+		WebElement element = driver.findElement(By.name(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		String text = element.getText();
+		return text;
+	}
+	
+	// Return Text By Index
+	
+	public String byNameReturnTextIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.name(selector));
+		String actualText = element.get(index).getText();
+		return actualText;
+	}
+	
+	public String byIdReturnTextIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.id(selector));
+		String actualText = element.get(index).getText();
+		return actualText;
+	}
+	
+	public String byCssReturnTextIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.cssSelector(selector));
+		String actualText = element.get(index).getText();
+		return actualText;
+	}
+	
+	public String byTagNameReturnTextIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.tagName(selector));
+		String actualText = element.get(index).getText();
+		return actualText;
+	}
+	
+	public String byXpathReturnTextIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.xpath(selector));
+		String actualText = element.get(index).getText();
+		return actualText;
+	}
+	
+	public String byLinkTextReturnTextIndex(String selector, int index) {
+		List<WebElement> element = driver.findElements(By.linkText(selector));
+		String actualText = element.get(index).getText();
+		return actualText;
 	}
 
 	// By selector, Tagname
@@ -271,6 +400,135 @@ public class Alert {
 						.replace("-", ""));
 		actions.build().perform();
 		System.out.println(element.getText());
+	}
+	
+	public void byIdContains(String selector, String alertText) {
+		WebElement element = driver.findElement(By.id(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		element.getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		actions.build().perform();
+		System.out.println(element.getText());
+	}
+	
+	public void byCssContains(String selector, String alertText) {
+		WebElement element = driver.findElement(By.cssSelector(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		element.getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		actions.build().perform();
+		System.out.println(element.getText());
+	}
+	
+	public void byTagNameContains(String selector, String alertText) {
+		WebElement element = driver.findElement(By.tagName(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		element.getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		actions.build().perform();
+		System.out.println(element.getText());
+	}
+	
+	public void byXpathContains(String selector, String alertText) {
+		WebElement element = driver.findElement(By.xpath(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		element.getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		actions.build().perform();
+		System.out.println(element.getText());
+	}
+	
+	public void byLinkTextContains(String selector, String alertText) {
+		WebElement element = driver.findElement(By.linkText(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		element.getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		actions.build().perform();
+		System.out.println(element.getText());
+	}
+	
+	public void byNameContains(String selector, String alertText) {
+		WebElement element = driver.findElement(By.name(selector));
+		waitForVisible(driver, element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		element.getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		actions.build().perform();
+		System.out.println(element.getText());
+	}
+	
+	//Validate text Contains
+	public void byNameContainsIndex(String selector, int index, String alertText) {
+		List<WebElement> element = driver.findElements(By.name(selector));
+		element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byIdContainsIndex(String selector, int index, String alertText) {
+		List<WebElement> element = driver.findElements(By.id(selector));
+		element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byCssContainsIndex(String selector, int index, String alertText) {
+		List<WebElement> element = driver.findElements(By.cssSelector(selector));
+		element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byTagNameContainsIndex(String selector, int index, String alertText) {
+		List<WebElement> element = driver.findElements(By.tagName(selector));
+		element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byXpathContainsIndex(String selector, int index, String alertText) {
+		List<WebElement> element = driver.findElements(By.xpath(selector));
+		element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byLinkTextContainsIndex(String selector, int index, String alertText) {
+		List<WebElement> element = driver.findElements(By.linkText(selector));
+		element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byClassContainsIndex(String selector, int index, String alertText) {
+		List<WebElement> element = driver.findElements(By.className(selector));
+		element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("-", "")
+				.contains(alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", "").replace("\n", "")
+						.replace("-", ""));
+		System.out.println(element.get(index).getText());
 	}
 
 	// By Attribute Display
@@ -313,6 +571,54 @@ public class Alert {
 	// validate Class by index
 	public void byClassByIndex(int index, String selector, String alertText) {
 		List<WebElement> element = driver.findElements(By.className(selector));
+		Assert.assertEquals(
+				element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""),
+				alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byNameByIndex(int index, String selector, String alertText) {
+		List<WebElement> element = driver.findElements(By.name(selector));
+		Assert.assertEquals(
+				element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""),
+				alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byXpathByIndex(int index, String selector, String alertText) {
+		List<WebElement> element = driver.findElements(By.xpath(selector));
+		Assert.assertEquals(
+				element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""),
+				alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byCssByIndex(int index, String selector, String alertText) {
+		List<WebElement> element = driver.findElements(By.cssSelector(selector));
+		Assert.assertEquals(
+				element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""),
+				alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byIdByIndex(String selector, int index, String alertText) {	
+		List<WebElement> element = driver.findElements(By.id(selector));
+		Assert.assertEquals(
+				element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""),
+				alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byLinkTextByIndex(int index, String selector, String alertText) {
+		List<WebElement> element = driver.findElements(By.linkText(selector));
+		Assert.assertEquals(
+				element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""),
+				alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""));
+		System.out.println(element.get(index).getText());
+	}
+	
+	public void byTagByIndex(int index, String selector, String alertText) {
+		List<WebElement> element = driver.findElements(By.tagName(selector));
 		Assert.assertEquals(
 				element.get(index).getText().toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""),
 				alertText.toLowerCase().replace(" ", "").replace("\n", "").replace("\n", ""));

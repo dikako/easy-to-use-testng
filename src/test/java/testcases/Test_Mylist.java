@@ -47,7 +47,7 @@ public class Test_Mylist extends Setup {
 
 		url.urls("/explores");
 		button.byClassByIndex("col-4", 1);
-		String getTitleBeforeAddMylist = alert.byClassGetText("content-title");
+		String getTitleBeforeAddMylist = alert.byClassReturnText("content-title");
 		System.out.println(getTitleBeforeAddMylist);
 		button.byXpath("//h3[contains(text(),'My List')]");
 		Thread.sleep(5000);
@@ -59,7 +59,7 @@ public class Test_Mylist extends Setup {
 		button.byXpath("//strong[contains(text(),'" + getTitleBeforeAddMylist + "')]");
 		Thread.sleep(5000);
 		
-		String getTitleAfterAddMylist = alert.byClassGetText("content-title");
+		String getTitleAfterAddMylist = alert.byClassReturnText("content-title");
 		Assert.assertEquals(getTitleBeforeAddMylist, getTitleAfterAddMylist);
 		System.out.println(getTitleAfterAddMylist);
 
@@ -96,7 +96,7 @@ public class Test_Mylist extends Setup {
 		button.byClassByIndex("col-4", 1);
 		Thread.sleep(5000);
 
-		String getTitleBeforeAddMylist = alert.byClassGetText("content-title");
+		String getTitleBeforeAddMylist = alert.byClassReturnText("content-title");
 		System.out.println(getTitleBeforeAddMylist);
 		button.byXpath("//h3[contains(text(),'My List')]");
 		Thread.sleep(5000);
@@ -110,7 +110,7 @@ public class Test_Mylist extends Setup {
 		button.byXpath("//strong[contains(text(),'" + getTitleBeforeAddMylist + "')]");
 		Thread.sleep(5000);
 		
-		String getTitleAfterAddMylist = alert.byClassGetText("content-title");
+		String getTitleAfterAddMylist = alert.byClassReturnText("content-title");
 		Assert.assertEquals(getTitleBeforeAddMylist, getTitleAfterAddMylist);
 		System.out.println(getTitleAfterAddMylist);
 
