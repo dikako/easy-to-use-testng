@@ -5,9 +5,6 @@ import org.openqa.selenium.WebDriver;
 public class Url {
 	private WebDriver driver;
 
-//	 String baseUrl = "https://rc-webm.rctiplus.com";
-//	String baseUrl = "https://dev-webm.rctiplus.com";
-
 	String baseUrl = "Your BASE URL";
 
 	public Url(WebDriver driver) {
